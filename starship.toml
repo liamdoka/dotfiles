@@ -127,7 +127,7 @@ symbol = " "
 style = "bright-blue"
 
 [git_status]
-deleted = "[✕$count](red) "
+deleted = "[✕$count](bright-red) "
 untracked = "[?$count](blue) "
 modified = "[!$count](yellow) "
 staged = "[+$count](bold yellow) "
