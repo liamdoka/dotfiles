@@ -1,0 +1,24 @@
+window:
+  decorations: Full
+  padding:
+    x: 12
+    y: 8
+cursor:
+  style: Beam
+font:
+  normal:
+    family: FiraMono Nerd Font
+    style: Regular
+  italic:
+    family: FiraMono Nerd Font
+    style: Italic
+  bold: 
+    family: FiraMono Nerd Font
+    style: Bold
+  size: 12
+colors:
+  primary:
+    background: '#0D0908'
+    foreground: '#F7F3F2'
+key_bindings:
+  - { key: V, mods: Control, action: Paste }

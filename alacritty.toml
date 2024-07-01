@@ -1,0 +1,32 @@
+[cursor]
+style = "Beam"
+
+[font]
+size = 14
+
+[font.offset]
+y = 8
+
+[font.glyph_offset]
+y = 2
+
+[font.bold]
+family = "FiraMono Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "FiraMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "FiraMono Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[window]
+decorations = "Full"
+title = "Terminal"

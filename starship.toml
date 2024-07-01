@@ -1,8 +1,15 @@
-format = """\
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false 
+command_timeout = 2000
+
+format = """ \
 $directory\
 $git_branch\
 $git_status\
-[➜](bold green) """
+$character"""
 
 right_format = """\
 $fill\
@@ -70,11 +77,9 @@ symbol = " "
 [c]
 symbol = " "
 
-# ~/.config/starship.toml
-
 [character]
-success_symbol = '[➜](bold green) '
-error_symbol = '[✗](bold red) '
+success_symbol = '[➜](bold green)'
+error_symbol = '[✗](bold red)'
 
 [conda]
 symbol = " "
@@ -87,13 +92,12 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
-truncation_length = 3
+truncation_length = 4
 truncation_symbol = "../"
+repo_root_style = "bright-green"
 repo_root_format = """
-/\
-[$repo_root]($repo_root_style)\
+[⁘](bright-blue) [$repo_root]($repo_root_style) \
 """
-
 
 [docker_context]
 symbol = " "
@@ -120,9 +124,15 @@ symbol = " "
 [git_branch]
 format = '[$symbol$branch]($style) '
 symbol = " "
+style = "bright-blue"
 
 [git_status]
-format = "\\[$modified$staged$untracked\\] "
+deleted = "[✕$count](red) "
+untracked = "[?$count](blue) "
+modified = "[!$count](yellow) "
+staged = "[+$count](bold yellow) "
+stashed = "[*$count](green) "
+format = '$staged$modified$deleted$untracked$stashed'
 
 [golang]
 symbol = " "
