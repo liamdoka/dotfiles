@@ -94,6 +94,7 @@ symbol = " "
 read_only = " 󰌾"
 truncation_length = 4
 truncation_symbol = "../"
+style = "cyan"
 repo_root_style = "bright-green"
 repo_root_format = """
 [⁘](bright-blue) [$repo_root]($repo_root_style)[$path](dimmed green) \
